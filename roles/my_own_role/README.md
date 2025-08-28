@@ -4,7 +4,7 @@
 It role creates a text file on a remote host with a given content.
 
 > **! Notice**
-This role does not guarantee the correct work. This is the result of the solution of home work at the DevOPS course and an example of using ANSIBLE collections, modules, roles... for automatic inventory configuration deployment.
+This role does not guarantee the correct work. This is the result of the solution of home work at the DevOps course and an example of using ANSIBLE collections, modules, roles... for automatic inventory configuration deployment.
 
 ## Role Variables
 
@@ -16,12 +16,6 @@ This role does not guarantee the correct work. This is the result of the solutio
 ## Dependencies
 
 Not found
-
-## Installation
-
-```shell
-ansible-galaxy collection install dimosspb_devopscourse-training-1.0.0.tar.gz
-```
 
 ## Example Playbook
 ```yaml
