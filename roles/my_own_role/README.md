@@ -1,4 +1,4 @@
-### Ansible role: dimosspb_devopscourse.training.my_own_role
+# Ansible role: dimosspb_devopscourse.training.my_own_role
 ## Description
 
 It role creates a text file on a remote host with a given content.
