@@ -1,0 +1,5 @@
+---
+- name: Create a file with content
+  dimosspb_devopscourse.training.my_own_module:
+    path: /home/odv/tmp-t/Hello.txt
+    content: "Hello from playbook!!"
