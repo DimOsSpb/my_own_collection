@@ -34,6 +34,7 @@ ansible-doc dimosspb_devopscourse.training.yc
 # OR
 ansible-doc -M ./dimosspb_devopscourse/training/plugins/modules yc
 ```
+
 ## License
 
 MIT
