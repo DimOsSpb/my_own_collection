@@ -17,7 +17,7 @@ This collection does not guarantee the correct work. This is the result of the s
 
 ## Installation
 
-- [Download collection](https://raw.githubusercontent.com/DimOsSpb/my_own_collection/1.0.0/dimosspb_devopscourse-training-1.0.0.tar.gz) and install it:
+- [Download collection](https://raw.githubusercontent.com/DimOsSpb/my_own_collection/1.1.2/dimosspb_devopscourse-training-1.1.1.tar.gz) and install it:
 
 ```shell
 ansible-galaxy collection install dimosspb_devopscourse-training-1.0.0.tar.gz
