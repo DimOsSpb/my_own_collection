@@ -38,116 +38,118 @@ options:
         type: str
     vms:
         description:
-        - "List of virtual machines to create or manage."
+            - "List of virtual machines to create or manage."
         type: list
         elements: dict
         options:
-        name:
-            description:
-            - "The name of the virtual machine."
-            type: str
-            required: true
-        zone:
-            description:
-            - "The zone where the VM will be created."
-            type: str
-            required: true
-        platform_id:
-            description:
-            - "The platform type of the virtual machine."
-            type: str
-            default: "standard-v1"
-        force_recreate:
-            description:
-            - "If true, this VM will be forcibly recreated even if it exists."
-            type: bool
-            default: false
-        force_restart:
-            description:
-            - "If true, this VM will be forcibly restarted even if no changes detected."
-            type: bool
-            default: false
-        resources_spec:
-            description:
-            - "The resources specification of the VM."
-            type: dict
-            options:
-            cores:
+            name:
                 description:
-                - "Number of CPU cores."
-                type: int
-                required: true
-            memory:
-                description:
-                - "Amount of RAM in GB."
-                type: int
-                required: true
-            core_fraction:
-                description:
-                - "CPU time fraction."
-                type: int
-                default: 0
-        boot_disk_spec:
-            description:
-            - "Boot disk configuration."
-            type: dict
-            options:
-            disk_spec:
-                description:
-                - "Disk parameters."
-                type: dict
-                options:
-                type_id:
-                    description:
-                    - "Disk type, e.g., network-hdd or network-ssd."
-                    type: str
-                size:
-                    description:
-                    - "Disk size in GB."
-                    type: int
-                    required: true
-                image_id:
-                    description:
-                    - "Image ID for the disk."
-                    type: str
-                    required: true
-        network_interface_specs:
-            description:
-            - "Network interfaces of the VM."
-            type: dict
-            options:
-            subnet_id:
-                description:
-                - "Subnet ID."
+                    - "The name of the virtual machine."
                 type: str
                 required: true
-            primary_v4_address_spec:
+            zone:
                 description:
-                - "Primary IPv4 address settings."
-                type: dict
-                options:
-                nat:
-                    description:
-                    - "Enable NAT (one-to-one
-        scheduling_policy:
-            description:
-                - "VM scheduling policy."
-            type: dict
-            options:
-                preemptible:
+                    - "The zone where the VM will be created."
+                type: str
+                required: true
+            platform_id:
                 description:
-                    - "Allow preemptible VM."
+                    - "The platform type of the virtual machine."
+                type: str
+                default: "standard-v1"
+            force_recreate:
+                description:
+                    - "If true, this VM will be forcibly recreated even if it exists."
                 type: bool
                 default: false
-        metadata:
-            description:
-                - "VM metadata, e.g., SSH keys."
-            type: dict
-            options:
-                ssh-keys:
+            force_restart:
                 description:
-                    - "SSH keys for VM access in format 'user:ssh-rsa ...'."
-                type: str
+                    - "If true, this VM will be forcibly restarted even if no changes detected."
+                type: bool
+                default: false
+            resources_spec:
+                description:
+                    - "The resources specification of the VM."
+                type: dict
+                options:
+                    cores:
+                        description:
+                            - "Number of CPU cores."
+                        type: int
+                        required: true
+                    memory:
+                        description:
+                            - "Amount of RAM in GB."
+                        type: int
+                        required: true
+                    core_fraction:
+                        description:
+                            - "CPU time fraction."
+                        type: int
+                        default: 0
+            boot_disk_spec:
+                description:
+                    - "Boot disk configuration."
+                type: dict
+                options:
+                    disk_spec:
+                        description:
+                            - "Disk parameters."
+                        type: dict
+                        options:
+                            type_id:
+                                description:
+                                    - "Disk type, e.g., network-hdd or network-ssd."
+                                type: str
+                            size:
+                                description:
+                                    - "Disk size in GB."
+                                type: int
+                                required: true
+                            image_id:
+                                description:
+                                    - "Image ID for the disk."
+                                type: str
+                                required: true
+            network_interface_specs:
+                description:
+                    - "Network interfaces of the VM."
+                type: dict
+                options:
+                    subnet_id:
+                        description:
+                            - "Subnet ID."
+                        type: str
+                        required: true
+                    primary_v4_address_spec:
+                        description:
+                            - "Primary IPv4 address settings."
+                        type: dict
+                        options:
+                            nat:
+                                description:
+                                    - "Enable NAT"
+                                type: bool
+                                default: true
+            scheduling_policy:
+                description:
+                    - "VM scheduling policy."
+                type: dict
+                options:
+                    preemptible:
+                        description:
+                            - "Allow preemptible VM."
+                        type: bool
+                        default: false
+            metadata:
+                description:
+                    - "VM metadata, e.g., SSH keys."
+                type: dict
+                options:
+                    ssh-keys:
+                        description:
+                            - "SSH keys for VM access in format 'user:ssh-rsa ...'."
+                        type: str
 
 
 # Specify this value according to your collection
