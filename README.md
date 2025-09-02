@@ -13,6 +13,7 @@ This collection does not guarantee the correct work. This is the result of the s
   - Ansible >= 2.9
   - Python >= 3.6
   - Yandex Cloud SDK (pip install yandexcloud)
+  - [Yandex Cloud access](https://yandex.cloud/en/docs/getting-started/)
 
 ## Installation
 
